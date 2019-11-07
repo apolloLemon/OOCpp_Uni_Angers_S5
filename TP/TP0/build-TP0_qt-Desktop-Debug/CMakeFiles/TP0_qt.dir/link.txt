@@ -1,0 +1,1 @@
+/usr/bin/g++   -g   CMakeFiles/TP0_qt.dir/main.cpp.o  -o TP0_qt -rdynamic 
