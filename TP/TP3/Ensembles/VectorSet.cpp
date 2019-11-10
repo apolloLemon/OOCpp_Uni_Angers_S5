@@ -31,3 +31,15 @@ void VectorSet::Remove(int x){
 		}
 	}
 }
+
+void VectorSet::Empty(){
+	e.clear();
+}
+
+bool VectorSet::End(Crawler &c){
+	return ((unsigned int)c.Index()>=e.size());
+}
+
+int VectorSet::Get(Crawler &c) {
+	return e[c.Index()];
+}

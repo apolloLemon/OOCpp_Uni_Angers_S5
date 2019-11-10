@@ -43,3 +43,17 @@ void ArraySet::Remove(int x){
 		}
 	}
 }
+
+void ArraySet::Empty(){
+	delete [] e;
+	e=nullptr;
+	size=0;
+}
+
+bool ArraySet::End(Crawler &c){
+	return (c.Index()>=size);
+}
+
+int ArraySet::Get(Crawler &c) {
+	return e[c.Index()];
+}

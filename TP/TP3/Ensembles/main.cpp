@@ -22,8 +22,15 @@ void TestSets(Set & a, Set & b) {
 
 	printf("a.Contains(2)=%d b.Contains(2)=%d\n", a.Contains(2), b.Contains(2));
 
-	a.COUT();
-	b.COUT();
+	a.Show();
+	b.Show();
+
+	//for(Crawler p=a.Start();!a.End(p);p.Increment()){
+	//	printf("%d\n", a.Get(p));
+	//}//Crawler used in .Show()
+
+	//a.Empty();
+	//b.Empty();
 }
 
 int main(){
@@ -32,8 +39,37 @@ int main(){
 	VectorSet ev = VectorSet();
 
 	//Set Sets[2] = {et,ev};
-
 	TestSets(et,ev);
 
+	et.Add(2);
+
+	ArraySet U = ArraySet();
+	U.Union(et,ev);
+
+	VectorSet N = VectorSet();
+	N.Intersection(et,ev);
+
+	ArraySet D = ArraySet();
+	D.Difference(U,N);
+
+	for(Crawler p=U.Start();!U.End(p);U.Next(p)){
+		printf("%d", U.Get(p));
+	}//Crawler used in .Show()
+
+	printf("\n");
+
+	for(Crawler p=N.Start();!N.End(p);N.Next(p)){
+		printf("%d", N.Get(p));
+	}//Crawler used in .Show()
+
+	printf("\n");
+
+	for(Crawler p=D.Start();!D.End(p);D.Next(p)){
+		printf("%d", D.Get(p));
+	}//Crawler used in .Show()
+
+
+	et.Empty();
+	ev.Empty();
 	return 0;
 }
