@@ -46,30 +46,26 @@ int main(){
 	ArraySet U = ArraySet();
 	U.Union(et,ev);
 
+	U.Show();
+
 	VectorSet N = VectorSet();
 	N.Intersection(et,ev);
+
+	N.Show();
 
 	ArraySet D = ArraySet();
 	D.Difference(U,N);
 
-	for(Crawler p=U.Start();!U.End(p);U.Next(p)){
-		printf("%d", U.Get(p));
-	}//Crawler used in .Show()
+	D.Show();
 
-	printf("\n");
 
-	for(Crawler p=N.Start();!N.End(p);N.Next(p)){
-		printf("%d", N.Get(p));
-	}//Crawler used in .Show()
-
-	printf("\n");
-
-	for(Crawler p=D.Start();!D.End(p);D.Next(p)){
-		printf("%d", D.Get(p));
-	}//Crawler used in .Show()
-
+//This is so Valgrind says I'm perfect but I've only cleared 14/15 allocs...
 
 	et.Empty();
 	ev.Empty();
+
+	U.Empty();
+	N.Empty();
+	D.Empty();
 	return 0;
 }
