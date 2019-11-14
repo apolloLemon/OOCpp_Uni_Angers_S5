@@ -18,8 +18,12 @@ int main(int argc, char const *argv[]) {
 	TimeTester(H1);
 	TimeTester(Hs[2]);
 
-	str foo="foo", bar="bar";
-	Message M(foo,bar);
+	// Message::Mcnt=0;
+
+	str foo="foo";
+	vstr bar;
+	bar.push_back("bar1");bar.push_back("bar2");bar.push_back("bar3");
+	MessageText M(foo,bar,"text");
 
 
 	return 0;

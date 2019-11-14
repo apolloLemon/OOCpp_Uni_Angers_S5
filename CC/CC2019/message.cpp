@@ -1,8 +1,11 @@
 #include "message.h"
 
+N Message::Mcnt(0);
+
 Message::Message(str exp, vstr dest) :
  expediteur(exp), destinataires(dest){
- 	id=++Message::Mcnt;
+ 	++Mcnt;
+ 	id=Mcnt;
  }
 
 MessageText::MessageText(str exp, vstr dest, str t) : 
@@ -20,8 +23,8 @@ Reponse::Reponse(str exp, vstr dest, N id, Horaire h) :
 bool MessageText::ReunionDate(N j, N m) const {return false;}
 
 bool Proposition::ReunionDate(N j, N m) const {
-	for(auto const & i : Horaires)
-		if(i->Jour()==j && i->Mois()==m)
+	for(auto const & i : horaires)
+		if(i.Jour()==j && i.Mois()==m)
 			return true;
 	return false;
 }
@@ -33,5 +36,5 @@ bool Reponse::ReunionDate(N j, N m) const {
 
 //SortieFlux
 void Message::SortieFlux(std::ostream & os) const{
-
+	return;
 }

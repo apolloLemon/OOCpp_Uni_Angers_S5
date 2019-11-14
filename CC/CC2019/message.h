@@ -9,6 +9,7 @@ class Message {
 	vstr destinataires;
 
 public:
+
 	Message(str, vstr);
 
 	//get
