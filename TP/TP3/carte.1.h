@@ -2,8 +2,8 @@
 #include <string>
 #include "../TP2/sizepos.h"
 
-using Score = unsigned int;
-
+//using Score = unsigned int;
+typedef unsigned int Score;
 //std::ostream & << (std::ostream &, Element const &);
 
 class Element{
