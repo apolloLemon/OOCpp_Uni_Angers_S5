@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <ostream>
 #include <sstream>
+#include <iostream>
 
 std::ostream & operator<<(std::ostream & os, Position const & p){
 	os << "(" << p.X() << "," << p.Y() << ")";
@@ -71,10 +72,53 @@ Positions Queen::validmoves() const {
 		if(ph.estvalide() && ph!=pos()) out.push_back(ph);
 	}
 
+	// Left Down
+	for(int x=pos().X()-1,y=pos().Y()-1; x>0 && y>0; x--,y--){
+		Position p(x,y);
+		if(p.estvalide()) out.push_back(p);
+	}
+	// Left Up
+	for(int x=pos().X()-1,y=pos().Y()+1; x>0 && y<8; x--,y++){
+		Position p(x,y);
+		if(p.estvalide()) out.push_back(p);
+	}
+	// Right Up
+	for(int x=pos().X()+1,y=pos().Y()+1; x<8 && y<8; x++,y++){
+		Position p(x,y);
+		if(p.estvalide()) out.push_back(p);
+	}
+	// Right Down
+	for(int x=pos().X()+1,y=pos().Y()-1; x<8 && y>0; x++,y--){
+		Position p(x,y);
+		if(p.estvalide()) out.push_back(p);
+	}
+
+	return out;
+}
+
+Positions Knight::validmoves() const {
+	Positions out;
+	for(coord i : {-1,1}){
+		for(coord j : {-1,1}){
+			Position pv(pos().X()+(3*i),pos().Y()+j);
+			Position ph(pos().X()+i,pos().Y()+(3*j));
+			if(pv.estvalide()) out.push_back(pv);
+			if(ph.estvalide()) out.push_back(ph);
+		}
+	}
 	return out;
 }
 
 int main(int argc, char const *argv[]) {
+
+	Pawn p(Colour::black, Position(3,PAWN_black));
+	King k(Colour::white, Position(4,0));
+	Queen q(Colour::white, Position(3,0));
+	Knight c(Colour::black, Position(0,0));
+
+	for(auto i : k.validmoves())
+		std::cout << i;
+	std::cout << std::endl;
 
 	return 0;
 }
