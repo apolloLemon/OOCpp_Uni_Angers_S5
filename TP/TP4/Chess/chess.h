@@ -46,6 +46,8 @@ public:
 	virtual char symbol() const =0;
 	virtual int value() const =0;
 	virtual Positions validmoves() const =0;
+	bool validmove(Position const &) const;
+	bool move(Position const &);
 
 	std::string tostring() const;
 

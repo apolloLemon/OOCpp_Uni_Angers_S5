@@ -25,7 +25,7 @@ std::string Piece::tostring() const {
 	//else ss<<"W";
 	 << position.X() << position.Y();
 	return ss.str();*/	
-	return std::string() + symbol() + ((colour == Colour::black) ? "B" : "N") +std::to_string(position.X())+std::to_string(position.Y());
+	return std::string() + symbol() + ((colour == Colour::black) ? "B" : "W") +std::to_string(position.X())+std::to_string(position.Y());
 }
 
 Positions Pawn::validmoves() const {
@@ -109,6 +109,22 @@ Positions Knight::validmoves() const {
 	return out;
 }
 
+bool Piece::validmove(Position const & p) const{
+	for(auto i : validmoves())
+		if(i==p) return true;
+	return false;
+}
+
+bool Piece::move(Position const & p) {
+	if(validmove(p)){
+
+		position.X(p.X()); position.Y(p.Y());
+
+		return true;
+	}
+	return false;
+}
+
 int main(int argc, char const *argv[]) {
 
 	Pawn p(Colour::black, Position(3,PAWN_black));
@@ -120,5 +136,12 @@ int main(int argc, char const *argv[]) {
 		std::cout << i;
 	std::cout << std::endl;
 
+	Position test(4,1);
+	std::cout << "Test Position ("<<test<<") is"
+	<< ((k.validmove(test)) ? " " : "n't ") 
+	<<"acceptable for "<<k.tostring()<<std::endl;
+
+	std::cout << ((k.move(test))? "":"un") <<"successful move, now: "
+	<< k.tostring()<<std::endl;
 	return 0;
 }
