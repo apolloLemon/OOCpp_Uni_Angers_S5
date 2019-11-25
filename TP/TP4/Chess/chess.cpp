@@ -100,8 +100,8 @@ Positions Knight::validmoves() const {
 	Positions out;
 	for(coord i : {-1,1}){
 		for(coord j : {-1,1}){
-			Position pv(pos().X()+(3*i),pos().Y()+j);
-			Position ph(pos().X()+i,pos().Y()+(3*j));
+			Position pv(pos().X()+(2*i),pos().Y()+j);
+			Position ph(pos().X()+i,pos().Y()+(2*j));
 			if(pv.estvalide()) out.push_back(pv);
 			if(ph.estvalide()) out.push_back(ph);
 		}
