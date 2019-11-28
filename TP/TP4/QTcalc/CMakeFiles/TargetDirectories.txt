@@ -1,0 +1,4 @@
+/home/melon/University/S5/COOP/TP/TP4/QTcalc/CMakeFiles/rebuild_cache.dir
+/home/melon/University/S5/COOP/TP/TP4/QTcalc/CMakeFiles/QtCalc.dir
+/home/melon/University/S5/COOP/TP/TP4/QTcalc/CMakeFiles/edit_cache.dir
+/home/melon/University/S5/COOP/TP/TP4/QTcalc/CMakeFiles/QtCalc_autogen.dir

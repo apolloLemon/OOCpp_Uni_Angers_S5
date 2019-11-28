@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+81939e24784159fcd5206778097b8aea CMakeFiles/QtCalc_autogen
