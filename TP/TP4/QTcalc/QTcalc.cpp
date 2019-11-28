@@ -16,19 +16,21 @@ calcul::calcul () : QWidget() {
 	resultat = new QLabel("",this);
 	quitter = new QPushButton("Quitter",this);
 
-	QObject::connect(quitter, &QPushButton::clicked, this, &QWidget::close);
-	QObject::connect(calculer, &QPushButton::clicked,this, &calcul::onclickcalculer);
-
-	QObject::connect(operande1, &QLineEdit::textChanged,this, &calcul::onclickcalculer);
-	QObject::connect(operande2, &QLineEdit::textChanged,this, &calcul::onclickcalculer);
-	QObject::connect(operateur, &QComboBox::currentTextChanged,this, &calcul::onclickcalculer);
-
+	//Set Geomerty
 	operande1->setGeometry(10,10,70,30);
 	operande2->setGeometry(150,10,70,30);
 	operateur->setGeometry(90,10,70,30);
 	calculer->setGeometry(230,10,70,30);
 	resultat->setGeometry(300,10,70,30);
 	quitter->setGeometry(370,10,70,30);
+	
+	//Connections
+	QObject::connect(quitter, &QPushButton::clicked, this, &QWidget::close);
+	QObject::connect(calculer, &QPushButton::clicked,this, &calcul::onclickcalculer);
+
+	QObject::connect(operande1, &QLineEdit::textChanged,this, &calcul::onclickcalculer);
+	QObject::connect(operande2, &QLineEdit::textChanged,this, &calcul::onclickcalculer);
+	QObject::connect(operateur, &QComboBox::currentTextChanged,this, &calcul::onclickcalculer);
 }
 
 void calcul::onclickcalculer() {
