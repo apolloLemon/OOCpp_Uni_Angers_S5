@@ -1,0 +1,4 @@
+/home/melon/University/S5/COOP/TI/QT/first/CMakeFiles/rebuild_cache.dir
+/home/melon/University/S5/COOP/TI/QT/first/CMakeFiles/firstqt.dir
+/home/melon/University/S5/COOP/TI/QT/first/CMakeFiles/edit_cache.dir
+/home/melon/University/S5/COOP/TI/QT/first/CMakeFiles/firstqt_autogen.dir

@@ -1,0 +1,4 @@
+/home/melon/University/S5/COOP/TI/QT/widget/CMakeFiles/rebuild_cache.dir
+/home/melon/University/S5/COOP/TI/QT/widget/CMakeFiles/widget.dir
+/home/melon/University/S5/COOP/TI/QT/widget/CMakeFiles/edit_cache.dir
+/home/melon/University/S5/COOP/TI/QT/widget/CMakeFiles/widget_autogen.dir
