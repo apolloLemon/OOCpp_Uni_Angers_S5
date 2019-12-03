@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/melon/University/S5/COOP/TP/TP4/Chess/ChessPiece.cpp
+ChessPiece.h
+/home/melon/University/S5/COOP/TP/TP4/Chess/ChessPiece.h
+algorithm
+-
+ostream
+-
+sstream
+-
+iostream
+-
+
+/home/melon/University/S5/COOP/TP/TP4/Chess/ChessPiece.h
+string
+-
+list
+-
+
+/home/melon/University/S5/COOP/TP/TP5/Chess/ChessBoard.cpp
+ChessBoard.h
+/home/melon/University/S5/COOP/TP/TP5/Chess/ChessBoard.h
+
+/home/melon/University/S5/COOP/TP/TP5/Chess/ChessBoard.h
+../../TP4/Chess/ChessPiece.h
+/home/melon/University/S5/COOP/TP/TP4/Chess/ChessPiece.h
+memory
+-
+
+/home/melon/University/S5/COOP/TP/TP5/Chess/Chess_autogen/mocs_compilation.cpp
+
