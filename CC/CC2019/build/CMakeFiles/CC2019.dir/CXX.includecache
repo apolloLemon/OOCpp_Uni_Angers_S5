@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/melon/University/S5/COOP/CC/CC2019/horaire.h
+include.h
+/home/melon/University/S5/COOP/CC/CC2019/include.h
+
+/home/melon/University/S5/COOP/CC/CC2019/include.h
+iostream
+-
+ostream
+-
+sstream
+-
+string
+-
+memory
+-
+vector
+-
+list
+-
+
+/home/melon/University/S5/COOP/CC/CC2019/main.cpp
+horaire.h
+/home/melon/University/S5/COOP/CC/CC2019/horaire.h
+message.h
+/home/melon/University/S5/COOP/CC/CC2019/message.h
+
+/home/melon/University/S5/COOP/CC/CC2019/message.cpp
+message.h
+/home/melon/University/S5/COOP/CC/CC2019/message.h
+iostream
+-
+
+/home/melon/University/S5/COOP/CC/CC2019/message.h
+include.h
+/home/melon/University/S5/COOP/CC/CC2019/include.h
+horaire.h
+/home/melon/University/S5/COOP/CC/CC2019/horaire.h
+

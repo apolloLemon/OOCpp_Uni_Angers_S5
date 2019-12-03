@@ -25,6 +25,8 @@ int main(int argc, char const *argv[]) {
 	bar.push_back("bar1");bar.push_back("bar2");bar.push_back("bar3");
 	MessageText M(foo,bar,"text");
 
+	M.SortieFlux(std::cout); std::cout<<std::endl;
+
 
 	return 0;
 }

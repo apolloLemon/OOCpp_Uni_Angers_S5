@@ -30,6 +30,7 @@ public:
 	str Text() const {return text;}
 
 	bool ReunionDate(N,N) const override;
+	void SortieFlux(std::ostream & os) const override;
 };
 
 class Proposition : public Message {
@@ -43,6 +44,7 @@ public:
 	std::vector<Horaire> Horaires() const {return horaires;}
 
 	bool ReunionDate(N,N) const override;
+	void SortieFlux(std::ostream & os) const override;
 };
 
 class Reponse : public Message {
@@ -57,5 +59,6 @@ public:
 	Horaire GetHoraire() const {return horaire;}
 
 	bool ReunionDate(N,N) const override;
+	void SortieFlux(std::ostream & os) const override;
 };
 

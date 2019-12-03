@@ -1,4 +1,5 @@
 #include "message.h"
+#include <iostream>
 
 N Message::Mcnt(0);
 
@@ -36,5 +37,26 @@ bool Reponse::ReunionDate(N j, N m) const {
 
 //SortieFlux
 void Message::SortieFlux(std::ostream & os) const{
-	return;
+	os << id <<" "<< expediteur << " ->";
+	for(auto i : destinataires)
+		os << " " << i;
+}
+
+void MessageText::SortieFlux(std::ostream & os) const {
+	Message::SortieFlux(os);
+	os <<" Text "<< text;
+}
+
+void Proposition::SortieFlux(std::ostream & os) const {
+	Message::SortieFlux(os);
+	os <<" PROPOSITION "<< descriptif <<" :";
+	for(auto i : horaires)
+		os <<" "<< i.ToString()
+}
+
+void Reponse::SortieFlux(std::ostream & os) const {
+	Message::SortieFlux(os);
+	os <<" REPONSE "<< descriptif <<" :";
+	for(auto i : horaires)
+		os <<" "<< i.ToString()
 }
